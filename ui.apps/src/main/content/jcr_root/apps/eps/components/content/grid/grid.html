@@ -1,0 +1,58 @@
+<div data-sly-test.author="${!wcmmode.disabled && !wcmInit.isTouchAuthoring && !wcmmode.preview}"
+	data-sly-unwrap>
+	<p style="color:#666;">Please Edit Grid Component</p>
+</div>
+<sly data-sly-use.grid="${'com.ads.eps.core.use.Grid'}"
+		data-sly-unwrap> </sly>
+<sly data-sly-test="${properties.gridheader}">
+<sly data-sly-test="${!properties.isgallery}">
+	<section class="project-additional-content">
+		<div class="row no-margin">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="text-center">
+					<h2>${properties.gridheader @context= 'html'}</h2>
+					${properties.griddescription @context= 'html'}
+				</div>
+			</div>
+		</div>
+		
+		<sly data-sly-test="${grid.gridFieldsList.size>0}">
+			<div class="row no-margin project-additional-tile-wrapper">	
+				<sly data-sly-list.griditem="${grid.gridFieldsList}" data-sly-unwrap>
+					<div class="col-sm-3 project-additional-tile">
+						<img src="${griditem.image}" alt="${griditem.title}"/>
+					</div>
+				</sly>
+			</div>
+		</sly>
+	</section>
+</sly>
+<sly data-sly-test="${properties.isgallery}">
+<section class="project-gallery">
+			<div class="row inner-margin">
+				<div class="col-md-12">
+					<div class="gallery-wrapper">
+						<h2>Solution</h2>
+						<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+							<sly data-sly-list.griditem="${grid.gridFieldsList}" data-sly-unwrap>
+								<li data-target="#carousel" data-slide-to="${griditemList.index}" ${griditemList.first? 'class="active"' :'' @ context= 'attribute' }></li>
+							</sly>
+							</ol>
+
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+							<sly data-sly-list.griditem="${grid.gridFieldsList}" data-sly-unwrap>
+								<div class="item ${griditemList.first? 'active' :''}">
+									<img src="${griditem.image}" alt="${griditem.title}"/>
+								</div>
+							</sly>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>	
+</sly>
+</sly>

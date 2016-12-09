@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Accordion Properties"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <showalltext
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Show All Text"
+            name="./showalltext"
+            defaultValue="Show All"
+            xtype="textfield"/>
+        <hidealltext
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Show All Text"
+            name="./hidealltext"
+            defaultValue="Hide All"
+            xtype="textfield"/>
+        <accordionitems
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Accordion Items"
+            fieldDescription="Click the '+' to add new items to accordion"
+            name="./accordionitems"
+            oderable="{Boolean}true"
+            xtype="multifield">
+            <fieldConfig
+                jcr:primaryType="cq:Widget"
+                xtype="multifieldpanel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Accordion Title"
+                        key="title"
+                        width="250"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Accordion Description"
+                        key="description"
+                        width="250"
+                        xtype="richtext">
+                        <rtePlugins xtype="cqinclude" jcr:primaryType="nt:unstructured" path="/apps/eps/components/content/config/richtextconfig/dialog/items/tab1/items/text/rtePlugins.infinity.json"/>
+                   </description>
+                </items>
+            </fieldConfig>
+		  </accordionitems>
+    </items>
+</jcr:root>

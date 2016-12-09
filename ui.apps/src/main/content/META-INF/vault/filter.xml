@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/eps">
+        <exclude pattern="/apps/eps/install" />
+    </filter>
+    <filter root="/apps/sling" />
+    <filter root="/apps/wcm" />
+    <filter root="/apps/touchuiwidgets" />
+    <filter root="/etc/designs/eps"/>
+</workspaceFilter>

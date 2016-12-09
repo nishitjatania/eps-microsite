@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Right Rail Content Properties"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+    	<contentheader
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Right Rail Content Header"
+            allowBlank="false"
+            name="./railcontentheader"
+            xtype="textfield"/>
+        <contentdetails
+		    jcr:primaryType="cq:Widget"
+		    fieldLabel="Right Rail Content Details"
+		    fieldDescription="Click the '+' to add content details."
+		    name="./details"
+		    oderable="{Boolean}true"
+		    xtype="multifield">
+		    <fieldConfig
+		        jcr:primaryType="cq:Widget"
+		        xtype="multifieldpanel">
+		        <items jcr:primaryType="cq:WidgetCollection">
+		            <contentdetail
+		                jcr:primaryType="cq:Widget"
+		                fieldLabel="Content Detail"
+		                allowBlank="false"
+		                key="detail"
+		                width="200"
+		                xtype="pathfield"/>	            
+		        </items>
+		    </fieldConfig>
+		</contentdetails>
+    </items>
+</jcr:root>

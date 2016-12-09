@@ -1,0 +1,33 @@
+<div data-sly-test.author="${!wcmmode.disabled && !wcmInit.isTouchAuthoring && !wcmmode.preview}"
+	data-sly-unwrap>
+	<p style="color:#666;">Please Edit Project Result Component</p>
+</div>
+<sly data-sly-test="${properties.projectresultheader}" data-sly-unwrap>
+	<sly data-sly-test="${!properties.iskeyresult}">
+		<section class="project-results lazyload" data-bgset="${properties.projectresultbgmobileimage || properties.projectresultbgxlimage} [(max-width: 480px)] | ${properties.projectresultbgtabletimage || properties.projectresultbgxlimage} [(max-width: 768px)] | ${properties.projectresultbglgimage || properties.projectresultbgxlimage} [(max-width: 1200px)] | ${properties.projectresultbgxlimage}">
+		  <div class="row no-margin">
+		    <div class="col-md-8 col-md-offset-2">
+		      <h2 class="text-center">${properties.projectresultheader @ context = 'html'}</h2>
+		      <sly data-sly-test="${properties.projectresultdescription}" data-sly-unwrap>
+					${properties.projectresultdescription @ context = 'html'} 
+			  </sly>
+		    </div>
+		  </div>
+		</section>
+	</sly>
+	<sly data-sly-test="${properties.iskeyresult}">
+		<section class="key-result lazyload" data-bgset="${properties.projectresultbgmobileimage || properties.projectresultbgxlimage} [(max-width: 480px)] | ${properties.projectresultbgtabletimage || properties.projectresultbgxlimage} [(max-width: 768px)] | ${properties.projectresultbglgimage || properties.projectresultbgxlimage} [(max-width: 1200px)] | ${properties.projectresultbgxlimage}">
+		<div class="row no-margin">
+			<div class="col-md-8 col-md-offset-2">
+				<img data-sly-test="${properties.projectresultimage}" src="${properties.projectresultimage}" class="surround">
+				<div class="content">
+					<h2>${properties.projectresultheader @ context = 'html'}</h2>
+					<sly data-sly-test="${properties.projectresultdescription}" data-sly-unwrap>
+						${properties.projectresultdescription @ context = 'html'} 
+				  	</sly>
+				</div>
+			</div>
+		</div>
+		</section>
+	</sly>
+</sly>

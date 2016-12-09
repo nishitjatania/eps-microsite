@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Banner Config"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <bannertheme
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Banner Theme"
+					            name="./bannertheme"
+					            required="true"
+					            sling:resourceType="granite/ui/components/foundation/form/select">
+					               <items jcr:primaryType="nt:unstructured">
+					                   <home
+					                       jcr:primaryType="nt:unstructured"
+					                       text="Home"
+					                       value="home"/>
+					                   <connectors
+					                       jcr:primaryType="nt:unstructured"
+					                       text="Connectors"
+					                       value="connectors"/>
+					                   <project
+					                       jcr:primaryType="nt:unstructured"
+					                       text="Project"
+					                       value="project"/>
+					                   <individualproject
+					                       jcr:primaryType="nt:unstructured"
+					                       text="Individual Project"
+					                       value="individualproject"/>
+					           	</items>
+					        </bannertheme>
+					        <bannerlogo
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Banner Logo"
+					            name="./bannerlogo"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>        
+					        <bannerlogourl
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Banner Logo URL"
+					            name="./bannerlogourl"
+					            rootPath="/content/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+					        <bannerlogotitle
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Banner Logo Link Title"
+					            name="./bannerlogotitle"
+					            sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+					        <bannerheader
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Banner Header"
+					            required="true"
+					            name="./bannerheader"
+					            sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+					        <bannerheaderimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Banner Header Image"
+					            name="./bannerheaderimage"
+					            fieldDescription="Select banner header image only for individual project theme"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+					        <bannerheaderimagealttext
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Banner Header Image Alt Text"
+					            fieldDescription="Select banner header image alt text only for individual project theme"
+					            name="./bannerheaderimagealttext"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/textfield"/>       
+					        <bannerdescription
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Banner Description"
+					            name="./bannerdescription"
+					            sling:resourceType="cq/gui/components/authoring/dialog/richtext"/>	
+					        <isRichTextFlag
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./textIsRich"
+                                value="true"/>				            
+					        <bannerbgxlimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Banner BG Desktop Image"
+					            name="./bannerbgxlimage"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+					        <bannerbgmobileimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Banner BG Mobile Device Image"
+					            name="./bannerbgmobileimage"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+					        <bannerbgtabletimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Banner BG Tablet Image"
+					            name="./bannerbgtabletimage"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+					        <bannerbglgimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Banner BG Large Image"
+					            name="./bannerbglgimage"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab1>
+        </items>
+    </content>
+</jcr:root>

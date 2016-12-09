@@ -1,0 +1,3 @@
+#base=scripts
+vendor/plugins.js
+main.js

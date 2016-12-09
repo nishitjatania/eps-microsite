@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Banner Properties"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+    	<bannertheme
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Banner Theme"
+            name="./bannertheme"
+            xtype="selection" 
+            allowBlank="false"
+            type="select">
+               <options jcr:primaryType="cq:WidgetCollection">
+                   <home
+                       jcr:primaryType="nt:unstructured"
+                       text="Home"
+                       value="home"/>
+                   <connectors
+                       jcr:primaryType="nt:unstructured"
+                       text="Connectors"
+                       value="connectors"/>
+                   <project
+                       jcr:primaryType="nt:unstructured"
+                       text="Project"
+                       value="project"/>
+                   <individualproject
+                       jcr:primaryType="nt:unstructured"
+                       text="Individual Project"
+                       value="individualproject"/>
+           	</options>
+        </bannertheme>
+        <bannerlogo
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Banner Logo"
+            name="./bannerlogo"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/>        
+        <bannerlogourl
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Banner Logo URL"
+            name="./bannerlogourl"
+            rootPath="/content/eps"
+            xtype="pathfield"/>
+        <bannerlogotitle
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Banner Logo Link Title"
+            name="./bannerlogotitle"
+            xtype="textfield"/>
+        <bannerheader
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Banner Header"
+            allowBlank="false"
+            name="./bannerheader"
+            xtype="textfield"/>
+        <bannerheaderimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Banner Header Image"
+            name="./bannerheaderimage"
+            fieldDescription="Select banner header image only for individual project theme"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/>
+        <bannerheaderimagealttext
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Banner Header Image Alt Text"
+            fieldDescription="Select banner header image alt text only for individual project theme"
+            name="./bannerheaderimagealttext"
+            rootPath="/content/dam/eps"
+            xtype="textfield"/>       
+        <bannerdescription
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Banner Description"
+            name="./bannerdescription"
+            xtype="richtext">
+            <rtePlugins xtype="cqinclude" jcr:primaryType="nt:unstructured" path="/apps/eps/components/content/config/richtextconfig/dialog/items/tab1/items/text/rtePlugins.infinity.json"/>
+        </bannerdescription>
+        <isRichTextFlag
+             jcr:primaryType="cq:Widget"
+             ignoreData="{Boolean}true"
+             name="./textIsRich"
+             value="true"
+             xtype="hidden"/>
+        <bannerbgxlimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Banner BG Desktop Image"
+            name="./bannerbgxlimage"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/>
+        <bannerbgmobileimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Banner BG Mobile Device Image"
+            name="./bannerbgmobileimage"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/>
+        <bannerbgtabletimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Banner BG Tablet Image"
+            name="./bannerbgtabletimage"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/>
+        <bannerbglgimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Banner BG Large Image"
+            name="./bannerbglgimage"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/>
+    </items>
+</jcr:root>

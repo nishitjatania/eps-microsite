@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Page"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cq.common.wcm,cq.siteadmin.admin.properties]"
+    mode="edit">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container"
+        class="cq-dialog-content-page">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container"
+                rel="cq-siteadmin-admin-properties-tabs">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                    type="nav"/>
+                <items jcr:primaryType="nt:unstructured">
+					<header
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sidebar"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+				                    <menuitems
+							            jcr:primaryType="nt:unstructured"
+				                        fieldLabel="Menu Items Config"
+				                        fieldDescription="Click the '+' to add items to the menu"
+				                        sling:resourceType="/apps/eps/components/content/common/multifield">
+				                        <field
+		                                	jcr:primaryType="nt:unstructured"
+		                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+		                                    name="./menuitems">
+		                                	<layout
+		                                    	jcr:primaryType="nt:unstructured"
+		                                    	sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+		                                        method="absolute"/>
+		                                    	<items jcr:primaryType="nt:unstructured">
+		                                        	<column
+		                                              	jcr:primaryType="nt:unstructured"
+		                                                sling:resourceType="granite/ui/components/foundation/container">
+			                                            <items jcr:primaryType="nt:unstructured">
+									                    <menulabel
+									                        jcr:primaryType="nt:unstructured"
+									                        required="true"
+									                        fieldLabel="Menu Label"
+									                        name="./menulabel"
+									                        width="250"
+									                        sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+									                    <menuurl
+									                        jcr:primaryType="nt:unstructured"
+									                        fieldLabel="Menu URL"
+									                        name="./menuurl"
+									                        width="250"
+									                        rootPath="/content/eps"
+									                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+									                    <icon
+									                        jcr:primaryType="nt:unstructured"
+									                        required="true"
+									                        fieldLabel="Menu Icon"
+									                        name="./menuicon"
+									                        sling:resourceType="granite/ui/components/foundation/form/select">
+							                                <items jcr:primaryType="nt:unstructured">
+							                                    <home
+							                                        jcr:primaryType="nt:unstructured"
+							                                        text="Home Icon"
+							                                        value="icon-home"/>
+							                                    <connectors
+							                                        jcr:primaryType="nt:unstructured"
+							                                        text="Connectors Icon"
+							                                        value="icon-connectors"/>
+							                                    <work
+							                                        jcr:primaryType="nt:unstructured"
+							                                        text="Work Icon"
+							                                        value="icon-work"/>
+							                                  </items>
+							                               </icon>
+							                               <isbutton
+										                        jcr:primaryType="nt:unstructured"
+										                        text="Is Button Flyout?"
+										                        name="./menuisbutton"
+										                        width="250"
+										                        sling:resourceType="granite/ui/components/foundation/form/checkbox"/>
+										                    <menuflyoutlabel
+										                        jcr:primaryType="nt:unstructured"
+										                        fieldLabel="Menu Flyout Label"
+										                        fieldDescription = "Use this field if its a button flyout."
+										                        name="./menuflyoutlabel"
+										                        width="250"
+										                        sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+							               			</items>
+		                                    	</column>
+		                                	</items>
+		                            	</field>
+									  </menuitems>
+									  <additionalmenuitems
+							            jcr:primaryType="nt:unstructured"
+				                        fieldLabel="Additional Menu Items Config"
+				                        fieldDescription="Click the '+' to add items to the additional menu"
+				                        sling:resourceType="/apps/eps/components/content/common/multifield">
+				                        <field
+		                                	jcr:primaryType="nt:unstructured"
+		                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+		                                    name="./additionalmenuitems">
+		                                	<layout
+		                                    	jcr:primaryType="nt:unstructured"
+		                                    	sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+		                                        method="absolute"/>
+		                                    	<items jcr:primaryType="nt:unstructured">
+		                                        	<column
+		                                              	jcr:primaryType="nt:unstructured"
+		                                                sling:resourceType="granite/ui/components/foundation/container">
+			                                            <items jcr:primaryType="nt:unstructured">
+										                    <menulabel
+										                        jcr:primaryType="nt:unstructured"
+										                        required="true"
+										                        fieldLabel="Menu Label"
+										                        name="./menulabel"
+										                        width="200"
+										                        sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+										                    <menuurl
+										                        jcr:primaryType="nt:unstructured"
+										                        fieldLabel="Menu URL"
+										                        name="./menuurl"
+										                        width="200"
+										                        rootPath="/content/eps"
+										                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+										                    <icon
+										                        jcr:primaryType="nt:unstructured"
+										                        required="true"
+										                        fieldLabel="Menu Icon"
+										                        name="./menuicon"
+										                        sling:resourceType="granite/ui/components/foundation/form/select">
+								                                <items jcr:primaryType="nt:unstructured">
+								                                    <newsviews
+								                                        jcr:primaryType="nt:unstructured"
+								                                        text="News Views Icon"
+								                                        value="icon-insight"/>
+								                                    <contactus
+								                                        jcr:primaryType="nt:unstructured"
+								                                        text="Contact Us Icon"
+								                                        value="icon-contact"/>
+								                                  </items>
+								                               </icon>
+							                		</items>
+		                                    	</column>
+		                                	</items>
+		                            	</field>
+									</additionalmenuitems>
+                                    <logo
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Mobile Header Logo"
+							            fieldDescription="Please select a Mobile Header Logo"
+							            name="./logo"
+							            rootPath="/content/dam/eps"
+							            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+							            value="/content/dam/eps/images/logo-epsilon.png"/>
+							        <togglenavtext
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Mobile Toggle Navigation Text"
+							            name="./togglenavigationtext"
+							            sling:resourceType="granite/ui/components/foundation/form/textfield"
+							            value="Toggle Navigation"/>
+							        <skipcontenttext
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Skip Content Text"
+							            name="./skipcontenttext"
+							            sling:resourceType="granite/ui/components/foundation/form/textfield"
+							            value="Skip To Main Content"/>
+                                </items>
+                            </columns>
+                        </items>
+                    </header>
+                    <footer
+			            jcr:primaryType="nt:unstructured"
+                        jcr:title="Footer"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+					                <contactustext
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Contact Us Text"
+							            fieldDescription="Please enter contact us text"
+							            name="./contactustext"
+							            sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+							         <contactusurl
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Contact Us URL"
+							            fieldDescription="Please enter contact us URL"
+							            name="./contactusurl"
+							            sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+							         <copyright
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Copy Right Text"
+							            fieldDescription="Please enter copyright text"
+							            name="./copyrighttext"
+							            sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+							        <privacy
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Privacy Policy Text"
+							            fieldDescription="Please enter privacy policy text"
+							            name="./privacytext"
+							            sling:resourceType="granite/ui/components/foundation/form/textfield"
+							            value="Privacy Policy"/>
+							        <privacyurl
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Privacy Policy URL"
+							            fieldDescription="Please enter privacy policy url"
+							            name="./privacyurl"
+							            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+							            value="https://www.epsilon.com/en_US/privacy-policy.html"/>
+							            <social
+								            jcr:primaryType="nt:unstructured"
+					                        fieldLabel="Social Media Items"
+										    fieldDescription="Click the '+' to add new items to social menu"
+					                        sling:resourceType="/apps/eps/components/content/common/multifield">
+					                        <field
+			                                	jcr:primaryType="nt:unstructured"
+			                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+			                                    name="./social">
+			                                	<layout
+			                                    	jcr:primaryType="nt:unstructured"
+			                                    	sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+			                                        method="absolute"/>
+			                                    	<items jcr:primaryType="nt:unstructured">
+			                                        	<column
+			                                              	jcr:primaryType="nt:unstructured"
+			                                                sling:resourceType="granite/ui/components/foundation/container">
+				                                            <items jcr:primaryType="nt:unstructured">
+												            	<socialtitle
+												                    jcr:primaryType="nt:unstructured"
+												                    fieldLabel="Social Title"
+												                    name="./socialtitle"
+												                    width="200"
+												                    sling:resourceType="granite/ui/components/foundation/form/textfield"/>	                
+												                <socialurl
+												                    jcr:primaryType="nt:unstructured"
+												                    fieldLabel="Social URL"
+												                    name="./socialurl"
+												                    width="200"
+												                    sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+												                <socialicon
+												                    jcr:primaryType="nt:unstructured"
+												                    required="true"
+												                    fieldLabel="Social Icon"
+												                    name="./socialicon"
+												                    sling:resourceType="granite/ui/components/foundation/form/select">
+								                                	<items jcr:primaryType="nt:unstructured">
+											                            <twitter
+											                                jcr:primaryType="nt:unstructured"
+											                                text="Twitter"
+											                                value="icon-twitter"/>
+											                            <facebook
+											                                jcr:primaryType="nt:unstructured"
+											                                text="Facebook"
+											                                value="icon-fb"/>
+											                            <gplus
+											                                jcr:primaryType="nt:unstructured"
+											                                text="Google Plus"
+											                                value="icon-gplus"/>
+											                            <gplus
+											                                jcr:primaryType="nt:unstructured"
+											                                text="LinkedIn"
+											                                value="icon-linkedin"/>
+											                    	</items>
+												                </socialicon>
+									            		</items>
+		                                    		</column>
+		                                		</items>
+		                            		</field>
+										</social>
+										<googleanalytics
+								            jcr:primaryType="nt:unstructured"
+								            fieldLabel="Google Analytics Site ID"
+								            fieldDescription="Please enter google analytics site ID"
+								            name="./gasiteid"
+								            sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+			            		</items>
+                            </columns>
+                        </items>
+			        </footer>                
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/basic"/>
+                    <advanced
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/advanced"/>
+                    <thumbnail
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/thumbnail"/>
+                    <cloudservices
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/cloudservices"/>
+                    <personalization
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/personalization"/>
+                    <permissions
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/permissions"/>
+                    <blueprint
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/blueprint"/>
+                    <livecopy
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/livecopy"/>
+                        
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

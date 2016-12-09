@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Article List Properties"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <rootpath
+	        jcr:primaryType="cq:Widget"
+	        fieldLabel="Project Pages Root Path"
+	        fieldDescription="Select the root path of the project pages. If this path is selected then all the content grid pages below the root path would be displayed. If root path and individual paths both are defined, a combined list is displayed after removing the duplicates"
+	        name="./rootpath"
+	        width="200"
+	        xtype="pathfield"/>
+		<definitions
+		    jcr:primaryType="cq:Widget"
+		    fieldLabel="Individual Project Pages"
+		    fieldDescription="Click the '+' to add paths to individual project pages"
+		    name="./definitions"
+		    oderable="{Boolean}true"
+		    xtype="multifield">
+		    <fieldConfig
+		        jcr:primaryType="cq:Widget"
+		        xtype="multifieldpanel">
+		        <items jcr:primaryType="cq:WidgetCollection">
+		            <linkpath
+		                jcr:primaryType="cq:Widget"
+		                fieldLabel="Individual project page path"
+		                key="linkpath"
+		                width="200"
+		                xtype="pathfield"/>		            
+		        </items>
+		    </fieldConfig>
+		</definitions> 
+		<ctaLabel
+	        jcr:primaryType="cq:Widget"
+	        fieldLabel="Article CTA Label"
+	        fieldDescription="Please provide a label for Article CTA. Ex - See Case Study"
+	        name="./ctalabel"
+	        xtype="textfield"/>
+    </items>
+</jcr:root>

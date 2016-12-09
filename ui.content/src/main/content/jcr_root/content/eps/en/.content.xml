@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-12-02T12:01:55.874-05:00"
+        cq:lastModifiedBy="admin"
+        jcr:lastModified="{Date}2016-12-02T09:50:08.992-05:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="en"
+        sling:resourceType="eps/components/structure/sitepage"
+        contactustext="Ready to talk? &lt;strong>Contact us&lt;/strong>"
+        contactusurl="#"
+        copyrighttext="Copyright &amp;copy; 2016 Epsilon Data Management LLC. All Rights Reserved."
+        menuitems="\{&quot;menulabel&quot;:&quot;Home&quot;,&quot;menuurl&quot;:&quot;/content/eps/en/home&quot;,&quot;menuicon&quot;:&quot;icon-home&quot;,&quot;menuisbutton&quot;:[]}"
+        privacytext="Privacy Policy"
+        privacyurl="https://www.epsilon.com/en_US/privacy-policy.html"
+        skipcontenttext="Skip To Main Content"
+        social="[{&quot;socialtitle&quot;:&quot;Twitter&quot;\,&quot;socialurl&quot;:&quot;#&quot;\,&quot;socialicon&quot;:&quot;icon-twitter&quot;},{&quot;socialtitle&quot;:&quot;Facebook&quot;\,&quot;socialurl&quot;:&quot;#&quot;\,&quot;socialicon&quot;:&quot;icon-fb&quot;},{&quot;socialtitle&quot;:&quot;LinkedIn&quot;\,&quot;socialurl&quot;:&quot;#&quot;\,&quot;socialicon&quot;:&quot;icon-linkedin&quot;}]"
+        togglenavigationtext="Toggle Navigation">
+        <image
+            jcr:lastModified="{Date}2016-12-02T12:01:55.868-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+    <home/>
+</jcr:root>

@@ -1,0 +1,29 @@
+<sly data-sly-use.accordion="${'com.ads.eps.core.use.Accordion'}"
+	data-sly-unwrap> </sly>
+<div data-sly-test.author="${!wcmmode.disabled && !wcmInit.isTouchAuthoring && !wcmmode.preview}"
+	data-sly-unwrap>
+	<p style="color:#666;">Please Edit Accordion Component</p>
+</div>
+<sly data-sly-test="${accordion.accordionFieldsList.size>0}">
+<section class="expand-collapse-wrapper">
+	<div class="row no-margin">
+		<div class="col-sm-12">
+			<div class="expand-collapse-controller pull-right">
+				<a href="#" class="show-all" role="button">${properties.showalltext || 'Show All'}</a> | <a href="#" class="hide-all" role="button">${properties.hidealltext || 'Hide All'}</a>
+			</div>
+			<div class="col-sm-12 expand-collapse-inner-wrapper">				
+			<sly data-sly-list.accordionitems="${accordion.accordionFieldsList}" data-sly-unwrap>
+				<div class="expand-collapse-item">
+					<h2>${accordionitems.title @ context = 'html'}</h2>
+					<a href="#expand-collapse-${accordionitemsList.count}" class="expand-toggle ${accordionitemsList.first? 'expanded' : 'collapse'}" data-toggle="collapse" aria-expanded="true" aria-controls="expand-collapse-${accordionitemsList.count}"><span class="sr-only">Toggle</span></a>
+					<div class="expand-collapse-content collapse ${accordionitemsList.first? 'in' : ''}" id="expand-collapse-1">
+						${accordionitems.description @ context = 'html'}
+					</div>
+				</div>
+			</sly>
+			</div>
+		</div>
+	</div>
+</section>
+</sly>
+<!-- END TEMPLATE: EXPAND COLLAPSE WRAPPER-->

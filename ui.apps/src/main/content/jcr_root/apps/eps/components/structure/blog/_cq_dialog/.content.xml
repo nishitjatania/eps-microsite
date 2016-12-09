@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Page"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cq.common.wcm,cq.siteadmin.admin.properties]"
+    mode="edit">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container"
+        class="cq-dialog-content-page">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container"
+                rel="cq-siteadmin-admin-properties-tabs">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                    type="nav"/>
+                <items jcr:primaryType="nt:unstructured">
+                <article
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Article"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+				                										<hideingrid
+							            jcr:primaryType="nt:unstructured"
+							            text="Hide this page in article list?"
+							            name="./hideingrid"
+							            sling:resourceType="granite/ui/components/foundation/form/checkbox"/>   
+					                <title
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Article Title"
+							            fieldDescription="Please enter article title"
+							            name="./articletitle"
+							            sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+							         <description
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Article Description"
+							            fieldDescription="Please enter article description"
+							            name="./articledescription"
+							            sling:resourceType="cq/gui/components/authoring/dialog/richtext"/>
+							         <articlebgxlimage
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Article BG Desktop Image"
+							            name="./articlebgxlimage"
+							            rootPath="/content/dam/eps"
+							            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+							        <articlebgmobileimage
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Article BG Mobile Device Image"
+							            name="./articlebgmobileimage"
+							            rootPath="/content/dam/eps"
+							            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+							        <articlebgtabletimage
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Article BG Tablet Image"
+							            name="./articlebgtabletimage"
+							            rootPath="/content/dam/eps"
+							            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+							        <articlebglgimage
+							            jcr:primaryType="nt:unstructured"
+							            fieldLabel="Article BG Large Image"
+							            name="./articlebglgimage"
+							            rootPath="/content/dam/eps"
+							            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+								</items>
+                            </columns>
+                        </items>
+                    </article>
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/basic"/>
+                    <advanced
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/advanced"/>
+                    <thumbnail
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/thumbnail"/>
+                    <cloudservices
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/cloudservices"/>
+                    <personalization
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/personalization"/>
+                    <permissions
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/permissions"/>
+                    <blueprint
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/blueprint"/>
+                    <livecopy
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/livecopy"/>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

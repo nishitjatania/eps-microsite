@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Article">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <article
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+            	<hideingrid
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Hide this page in article list?"
+		            name="./hideingrid"
+		            xtype="selection"
+		            type="checkbox"/>   
+                <title
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Article Title"
+		            fieldDescription="Please enter article title"
+		            name="./articletitle"
+		            xtype="textfield"/>
+		         <description
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Article Description"
+		            fieldDescription="Please enter article description"
+		            name="./articledescription"
+		            xtype="richtext"/>
+		         <articlebgxlimage
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Article BG Desktop Image"
+		            name="./articlebgxlimage"
+		            rootPath="/content/dam/eps"
+		            xtype="pathfield"/>
+		        <articlebgmobileimage
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Article BG Mobile Device Image"
+		            name="./articlebgmobileimage"
+		            rootPath="/content/dam/eps"
+		            xtype="pathfield"/>
+		        <articlebgtabletimage
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Article BG Tablet Image"
+		            name="./articlebgtabletimage"
+		            rootPath="/content/dam/eps"
+		            xtype="pathfield"/>
+		        <articlebglgimage
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Article BG Large Image"
+		            name="./articlebglgimage"
+		            rootPath="/content/dam/eps"
+		            xtype="pathfield"/>
+			</items>
+        </article>
+    </items>
+</jcr:root>

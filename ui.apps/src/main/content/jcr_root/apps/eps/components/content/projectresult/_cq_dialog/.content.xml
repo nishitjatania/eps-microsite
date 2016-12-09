@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Project Result Config"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <projectresultheader
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Project Result Header"
+					            required="true"
+					            name="./projectresultheader"
+					            sling:resourceType="granite/ui/components/foundation/form/textfield"/>       
+					        <projectresultdescription
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Project Result Description"
+					            name="./projectresultdescription"
+					            sling:resourceType="cq/gui/components/authoring/dialog/richtext"/>
+					        <projectresultimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Project Result Image"
+					            fieldDescription="Select this image only for key result display"
+					            required="true"
+					            rootPath="/content/dam/eps"
+					            name="./projectresultimage"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>  
+					        <iskeyresult
+					            jcr:primaryType="nt:unstructured"
+					            text="Display as Key Result?"
+					            name="./iskeyresult"
+					            sling:resourceType="granite/ui/components/foundation/form/checkbox"/>  
+					        <projectresultbgxlimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Project Result BG Desktop Image"
+					            name="./projectresultbgxlimage"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/> 
+					        <projectresultbgmobileimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Project Result BG Mobile Device Image"
+					            name="./projectresultbgmobileimage"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+					        <projectresultbgtabletimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Project Result BG Tablet Image"
+					            name="./projectresultbgtabletimage"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+					        <projectresultbglgimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Project Result BG Large Image"
+					            name="./projectresultbglgimage"
+					            required="true"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab1>
+        </items>
+    </content>
+</jcr:root>

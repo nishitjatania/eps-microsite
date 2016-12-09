@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Footer">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <footer
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <contactustext
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Contact Us Text"
+		            fieldDescription="Please enter contact us text"
+		            name="./contactustext"
+		            xtype="textfield"/>
+		         <contactusurl
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Contact Us URL"
+		            fieldDescription="Please enter contact us URL"
+		            name="./contactusurl"
+		            xtype="textfield"/>
+		         <copyright
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Copy Right Text"
+		            fieldDescription="Please enter copyright text"
+		            name="./copyrighttext"
+		            xtype="textfield"/>
+		        <privacy
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Privacy Policy Text"
+		            fieldDescription="Please enter privacy policy text"
+		            name="./privacytext"
+		            xtype="textfield"
+		            defaultValue="Privacy Policy"/>
+		        <privacyurl
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Privacy Policy URL"
+		            fieldDescription="Please enter privacy policy url"
+		            name="./privacyurl"
+		            xtype="pathfield"
+		            defaultValue="https://www.epsilon.com/en_US/privacy-policy.html"/>
+					<social
+				        jcr:primaryType="cq:Widget"
+				        fieldLabel="Social Media Items"
+				        fieldDescription="Click the '+' to add new items to social menu"
+				        name="./social"
+				        oderable="{Boolean}true"
+				        xtype="multifield">
+				        <fieldConfig
+				            jcr:primaryType="cq:Widget"
+				            xtype="multifieldpanel">
+				            <items jcr:primaryType="cq:WidgetCollection">
+				            	<socialtitle
+				                    jcr:primaryType="cq:Widget"
+				                    fieldLabel="Social Title"
+				                    key="socialtitle"
+				                    width="200"
+				                    xtype="textfield"/>	                
+				                <socialurl
+				                    jcr:primaryType="cq:Widget"
+				                    fieldLabel="Social URL"
+				                    key="socialurl"
+				                    width="200"
+				                    xtype="textfield"/>
+				                <socialicon
+				                    jcr:primaryType="cq:Widget"
+				                    allowBlank="{Boolean}false"
+				                    fieldLabel="Social Icon"
+				                    key="socialicon"
+				                    xtype="selection" 
+				                    type="select">
+			                        <options jcr:primaryType="cq:WidgetCollection">
+			                            <twitter
+			                                jcr:primaryType="nt:unstructured"
+			                                text="Twitter"
+			                                value="icon-twitter"/>
+			                            <facebook
+			                                jcr:primaryType="nt:unstructured"
+			                                text="Facebook"
+			                                value="icon-fb"/>
+			                            <gplus
+			                                jcr:primaryType="nt:unstructured"
+			                                text="Google Plus"
+			                                value="icon-gplus"/>
+			                            <gplus
+			                                jcr:primaryType="nt:unstructured"
+			                                text="LinkedIn"
+			                                value="icon-linkedin"/>
+			                    	</options>
+				                </socialicon>
+				            </items>
+				        </fieldConfig>
+					</social>
+					<googleanalytics
+			            jcr:primaryType="cq:Widget"
+			            fieldLabel="Google Analytics Site ID"
+			            fieldDescription="Please enter google analytics site ID"
+			            name="./gasiteid"
+			            xtype="textfield"/>
+            </items>
+        </footer>
+    </items>
+</jcr:root>

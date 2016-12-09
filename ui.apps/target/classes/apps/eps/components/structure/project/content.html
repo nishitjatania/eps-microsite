@@ -1,0 +1,22 @@
+<main id="content">
+	<div class="container-fluid no-pad" id="project">
+		<div data-sly-resource="${'banner' @resourceType='eps/components/content/banner'}" ></div>
+		<div data-sly-resource="${'projectdetails' @resourceType='eps/components/content/projectdetails'}" ></div>
+		<div data-sly-resource="${'gallery' @resourceType='eps/components/content/grid'}" ></div>
+		<div data-sly-resource="${'projectresult' @resourceType='eps/components/content/projectresult'}" ></div>
+		<div data-sly-resource="${'keyresult' @resourceType='eps/components/content/projectresult'}" ></div>
+		<div data-sly-test.author="${(wcmmode.edit || wcmmode.design)}"
+			>
+			<p>Please configure drop quote</p>
+		</div>
+		<div class="drop-quote">
+		  <div class="row no-margin">
+		    <div class="col-md-8 col-lg-10 col-md-offset-2 col-lg-offset-1">
+		      <div data-sly-resource="${'dropquote' @resourceType='eps/components/content/text'}" ></div>
+		    </div>
+		  </div>
+		</div>
+		</div>
+		<div data-sly-resource="${'grid' @resourceType='eps/components/content/grid'}" ></div>
+		<div data-sly-resource="${'mainpar' @resourceType='wcm/foundation/components/parsys'}" ></div>
+</main>

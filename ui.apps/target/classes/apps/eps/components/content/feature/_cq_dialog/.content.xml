@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Feature Config"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <featurebgimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Feature BG Image"
+					            name="./featurebgimage"
+					            rootPath="/content/dam/eps"
+					            required="true"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+					        <featurebgmobileimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Feature BG Mobile Device Image"
+					            name="./featurebgmobileimage"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+					        <featurebgtabletimage
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Feature BG Tablet Image"
+					            name="./featurebgmobileimage"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+					        <featurelogo
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Feature Logo"
+					            name="./featurelogo"
+					            rootPath="/content/dam/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+					        <featureheader
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Feature Header"
+					            required="true"
+					            name="./featureheader"
+					            sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+					        <featuresubheader
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Feature Sub Header"
+					            name="./featuresubheader"
+					            sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+					        <featuredescription
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Feature Description"
+					            name="./featuredescription"
+					            sling:resourceType="cq/gui/components/authoring/dialog/richtext"/>
+					        <ctalabel
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="CTA Label"
+					            name="./ctalabel"
+					            value="Learn More"
+					            sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+					        <ctaurl
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="CTA URL"
+					            name="./ctaurl"
+					            rootPath="/content/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab1>
+        </items>
+    </content>
+</jcr:root>

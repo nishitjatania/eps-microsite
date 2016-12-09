@@ -1,0 +1,22 @@
+<div data-sly-test.author="${!wcmmode.disabled && !wcmInit.isTouchAuthoring && !wcmmode.preview}"
+	data-sly-unwrap>
+	<p style="color:#666;">Please Edit Tile Component</p>
+</div>
+<sly data-sly-test="${properties.tileheader}" data-sly-unwrap>
+	<div class="${author?'':'col-ms-6'} project-tile project-tile-${properties.tiletheme || 'color-purple'}">
+	<div class="row">
+		<div class="col-md-8 col-ms-12">
+			<strong>${properties.tileheader @ context = 'html'}</strong>
+			<sly data-sly-test="${properties.tilesubtext}" data-sly-unwrap>
+			<h2>
+				${properties.tilesubtext @ context = 'html'}
+			</h2>
+			</sly>
+		</div>
+	</div>	
+	<div class="cta">
+		<sly data-sly-test="${properties.ctalabel}" data-sly-unwrap> <a
+				href="${properties.ctaurl}">${properties.ctalabel @ context = 'html'}</a> </sly>
+	</div>
+</div>
+</sly>

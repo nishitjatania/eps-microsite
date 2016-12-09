@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Grid Properties"
+    height="400"
+    width="600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+	    <items jcr:primaryType="cq:WidgetCollection">
+	    	<tab1
+               jcr:primaryType="cq:Panel"
+               title="Grid Config">
+               <items jcr:primaryType="cq:WidgetCollection">
+			        <gridheader
+			            jcr:primaryType="cq:Widget"
+			            fieldLabel="Grid Header"
+			            allowBlank="false"
+			            name="./gridheader"
+			            xtype="textfield"/>
+			        <isgallery
+			            jcr:primaryType="cq:Widget"
+			            fieldLabel="Display as Gallery?"
+			            name="./isgallery"
+			            xtype="selection"
+			            type="checkbox"/>         
+			        <griddescription
+			            jcr:primaryType="cq:Widget"
+			            fieldLabel="Grid Description"
+			            name="./griddescription"
+			            xtype="richtext">
+			            <rtePlugins xtype="cqinclude" jcr:primaryType="nt:unstructured" path="/apps/eps/components/content/config/richtextconfig/dialog/items/tab1/items/text/rtePlugins.infinity.json"/>
+			        </griddescription>
+			        <images
+					    jcr:primaryType="cq:Widget"
+					    fieldLabel="Grid Images"
+					    fieldDescription="Click the '+' to add grid images"
+					    name="./images"
+					    oderable="{Boolean}true"
+					    xtype="multifield">
+					    <fieldConfig
+					        jcr:primaryType="cq:Widget"
+					        xtype="multifieldpanel">
+					        <items jcr:primaryType="cq:WidgetCollection">
+					            <linkpath
+					                jcr:primaryType="cq:Widget"
+					                fieldLabel="Grid Image Path"
+					                allowBlank="false"
+					                key="imagepath"
+					                rootPath="/content/dam/eps"
+					                autoWidth="{Boolean}true"
+					                xtype="pathfield"/>
+					            <linktitle
+					                jcr:primaryType="cq:Widget"
+					                fieldLabel="Grid Image Title"
+					                key="imagetitle"
+					                autoWidth="{Boolean}true"
+					                xtype="textfield"/>		            
+					        </items>
+					    </fieldConfig>
+					</images> 
+    			</items>
+			</tab1>
+		</items>
+    </items>
+</jcr:root>

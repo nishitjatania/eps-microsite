@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Sidebar">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <header
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <menuitems
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Menu Items"
+		            fieldDescription="Click the '+' to add new items to header menu"
+		            name="./menuitems"
+		            oderable="{Boolean}true"
+		            xtype="multifield">
+		            <fieldConfig
+		                jcr:primaryType="cq:Widget"
+		                xtype="multifieldpanel">
+		                <items jcr:primaryType="cq:WidgetCollection">
+		                    <menulabel
+		                        jcr:primaryType="cq:Widget"
+		                        allowBlank="{Boolean}false"
+		                        fieldLabel="Menu Label"
+		                        key="menulabel"
+		                        width="250"
+		                        xtype="textfield"/>
+		                    <menuurl
+		                        jcr:primaryType="cq:Widget"
+		                        fieldLabel="Menu URL"
+		                        key="menuurl"
+		                        width="250"
+		                        rootPath="/content/eps"
+		                        xtype="pathfield"/>
+		                    <icon
+		                        jcr:primaryType="cq:Widget"
+		                        allowBlank="{Boolean}false"
+		                        fieldLabel="Menu Icon"
+		                        key="menuicon"
+		                        xtype="selection" 
+		                        type="select">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <home
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Home Icon"
+                                        value="icon-home"/>
+                                    <connectors
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Connectors Icon"
+                                        value="icon-connectors"/>
+                                    <work
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Work Icon"
+                                        value="icon-work"/>
+                                  </options>
+                               </icon>
+                               <isbutton
+			                        jcr:primaryType="cq:Widget"
+			                        fieldLabel="Is Button Flyout?"
+			                        key="menuisbutton"
+			                        width="250"
+			                        xtype="selection"
+			                        type="checkbox"/>
+			                    <menuflyoutlabel
+			                        jcr:primaryType="cq:Widget"
+			                        fieldLabel="Menu Flyout Label"
+			                        fieldDescription = "Use this field if its a button flyout."
+			                        key="menuflyoutlabel"
+			                        width="250"
+			                        xtype="textfield"/>
+		                </items>
+		            </fieldConfig>
+				  </menuitems>
+				  <additionalmenuitems
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Additional Menu Items"
+		            fieldDescription="Click the '+' to add new items to additional header menu"
+		            name="./additionalmenuitems"
+		            oderable="{Boolean}true"
+		            xtype="multifield">
+		            <fieldConfig
+		                jcr:primaryType="cq:Widget"
+		                xtype="multifieldpanel">
+		                <items jcr:primaryType="cq:WidgetCollection">
+		                    <menulabel
+		                        jcr:primaryType="cq:Widget"
+		                        allowBlank="{Boolean}false"
+		                        fieldLabel="Menu Label"
+		                        key="menulabel"
+		                        width="200"
+		                        xtype="textfield"/>
+		                    <menuurl
+		                        jcr:primaryType="cq:Widget"
+		                        fieldLabel="Menu URL"
+		                        key="menuurl"
+		                        width="200"
+		                        rootPath="/content/eps"
+		                        xtype="pathfield"/>
+		                    <icon
+		                        jcr:primaryType="cq:Widget"
+		                        allowBlank="{Boolean}false"
+		                        fieldLabel="Menu Icon"
+		                        key="menuicon"
+		                        xtype="selection" 
+		                        type="select">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <newsviews
+                                        jcr:primaryType="nt:unstructured"
+                                        text="News Views Icon"
+                                        value="icon-insight"/>
+                                    <contactus
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Contact Us Icon"
+                                        value="icon-contact"/>
+                                  </options>
+                               </icon>
+		                </items>
+		            </fieldConfig>
+				  </additionalmenuitems> 
+				  <logo
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Mobile Header Logo"
+		            fieldDescription="Please select a Mobile Header Logo"
+		            name="./logo"
+		            rootPath="/content/dam/eps"
+		            xtype="pathfield"
+		            defaultValue="/content/dam/eps/images/logo-epsilon.png"/>
+		        <togglenavtext
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Mobile Toggle Navigation Text"
+		            name="./togglenavigationtext"
+		            xtype="textfield"
+		            defaultValue="Toggle Navigation"/>
+		        <skipcontenttext
+		            jcr:primaryType="cq:Widget"
+		            fieldLabel="Skip Content Text"
+		            name="./skipcontenttext"
+		            xtype="textfield"
+		            defaultValue="Skip To Main Content"/>
+            </items>
+        </header>
+    </items>
+</jcr:root>

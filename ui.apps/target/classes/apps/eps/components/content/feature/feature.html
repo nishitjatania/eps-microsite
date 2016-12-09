@@ -1,0 +1,25 @@
+<div data-sly-test.author="${!wcmmode.disabled && !wcmInit.isTouchAuthoring && !wcmmode.preview}"
+	data-sly-unwrap>
+	<p style="color:#666;">Please Edit Feature Component</p>
+</div>
+<sly data-sly-test="${properties.featureheader}" data-sly-unwrap>
+	<section class="featured-case-study lazyload"
+	data-bgset="${properties.featurebgmobileimage || properties.featurebgimage} [(max-width: 480px)] | ${properties.featurebgtabletimage || properties.featurebgimage} [(max-width: 768px)] | ${properties.featurebgxlimage || properties.featurebgimage}">
+	<div class="row inner-margin">
+		<div class="col-md-5">
+			<h2>${properties.featureheader @ context = 'html'}</h2>
+			<sly data-sly-test="${properties.featurelogo}" data-sly-unwrap>
+			<img class="logo" src="${properties.featurelogo}" alt="" /> </sly>
+			<sly data-sly-test="${properties.featuresubheader}" data-sly-unwrap>
+			<h3>${properties.featuresubheader @ context = 'html'}</h3>
+			</sly>
+			<sly data-sly-test="${properties.featuredescription}" data-sly-unwrap>
+			${properties.featuredescription @ context = 'html'} </sly>
+		</div>
+		<div class="cta">
+			<sly data-sly-test="${properties.ctalabel}" data-sly-unwrap> <a
+				href="${properties.ctaurl}">${properties.ctalabel @ context = 'html'}</a> </sly>
+		</div>
+	</div>
+</section>
+</sly>

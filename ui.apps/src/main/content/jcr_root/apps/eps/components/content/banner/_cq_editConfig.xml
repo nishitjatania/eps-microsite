@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:actions="[text:Banner Component,-,edit,delete,copymove]"
+    cq:dialogMode="floating"
+    cq:disableTargeting="{Boolean}true"
+    cq:layout="editbar"
+    jcr:primaryType="cq:EditConfig">
+    <cq:inplaceEditing
+        jcr:primaryType="cq:InplaceEditingConfig"
+        active="{Boolean}true"
+        editorType="hybrid">
+        <cq:childEditors jcr:primaryType="nt:unstructured">
+            <bannerdescription
+                jcr:primaryType="cq:ChildEditorConfig"
+                title="Banner Description"
+                type="text"/>
+        </cq:childEditors>
+        <config jcr:primaryType="nt:unstructured">
+            <rtePlugins jcr:primaryType="nt:unstructured">
+                 <misctools
+                     jcr:primaryType="nt:unstructured"
+                     features="*"
+                     specialchars="[specialchars]">
+                     <specialCharsConfig jcr:primaryType="nt:unstructured">
+                         <chars jcr:primaryType="nt:unstructured">
+                             <copy
+                                 jcr:primaryType="nt:unstructured"
+                                 entity="&amp;copy;"/>
+                             <ndash
+                                 jcr:primaryType="nt:unstructured"
+                                 entity="&amp;ndash;"/>
+                             <reg
+                                 jcr:primaryType="nt:unstructured"
+                                 entity="&amp;reg;"/>
+                             <trade
+                                 jcr:primaryType="nt:unstructured"
+                                 entity="&amp;trade;"/>
+                             <mdash
+                                 jcr:primaryType="nt:unstructured"
+                                 entity="&amp;mdash;"/>
+                         </chars>
+                     </specialCharsConfig>
+                 </misctools>
+                 <lists
+                     jcr:primaryType="nt:unstructured"
+                     features="*"/>
+                 <justify
+                     jcr:primaryType="nt:unstructured"
+                     features="*"/>
+                 <format
+                     jcr:primaryType="nt:unstructured"
+                     features="*"/>
+                 <subsuperscript
+                     jcr:primaryType="nt:unstructured"
+                     features="*"/>
+                 <links jcr:primaryType="nt:unstructured">
+                     <linkDialogConfig
+                         jcr:primaryType="nt:unstructured"
+                         height="{Long}316">
+                     </linkDialogConfig>
+                 </links>
+                 <paraformat
+                     jcr:primaryType="nt:unstructured"
+                     features="*">
+                     <formats jcr:primaryType="cq:WidgetCollection">
+                         <Title_x0020_Page
+                             jcr:primaryType="nt:unstructured"
+                             description="Title Page"
+                             tag="h1"/>
+                         <Subtitle
+                             jcr:primaryType="nt:unstructured"
+                             description="Subtitle"
+                             tag="h2"/>
+                         <Title_x0020_in_x0020_Paragraphs
+                             jcr:primaryType="nt:unstructured"
+                             description="Title in Paragraphs"
+                             tag="h3"/>
+                         <Content
+                             jcr:primaryType="nt:unstructured"
+                             description="Content"
+                             tag="p"/>
+                         <Group
+                             jcr:primaryType="nt:unstructured"
+                             description="Group"
+                             tag="code"/>
+                     </formats>
+                 </paraformat>
+                 <spellcheck
+                     jcr:primaryType="nt:unstructured"
+                     features="*"/>
+                 <styles
+                     jcr:primaryType="nt:unstructured"
+                     features="*">
+                     <styles jcr:primaryType="cq:WidgetCollection">
+                         <separator
+                             jcr:primaryType="nt:unstructured"
+                             cssName="btn"
+                             text="Button"/>                               
+                     </styles>
+                 </styles>
+             </rtePlugins>
+        </config>
+    </cq:inplaceEditing>
+    <cq:listeners
+        jcr:primaryType="cq:EditListenersConfig"
+        afterdelete="REFRESH_PAGE"
+        afteredit="REFRESH_PAGE"/>        
+</jcr:root>

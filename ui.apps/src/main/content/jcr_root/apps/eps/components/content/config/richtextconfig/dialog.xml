@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Text"
+    title="text.jcrTitle"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="text.tabText.tabTitle"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <text
+                    jcr:primaryType="cq:Widget"
+                    hideLabel="{Boolean}true"
+                    name="./text"
+                    xtype="richtext">
+                    <rtePlugins jcr:primaryType="nt:unstructured">
+                        <misctools
+                            jcr:primaryType="nt:unstructured"
+                            features="*"
+                            specialchars="[specialchars]">
+                            <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                <chars jcr:primaryType="nt:unstructured">
+                                    <copy
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;copy;"/>
+                                    <ndash
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;ndash;"/>
+                                    <reg
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;reg;"/>
+                                    <trade
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;trade;"/>
+                                    <mdash
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;mdash;"/>
+                                </chars>
+                            </specialCharsConfig>
+                        </misctools>
+                        <lists
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <justify
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <format
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <subsuperscript
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <links jcr:primaryType="nt:unstructured">
+                            <linkDialogConfig
+                                jcr:primaryType="nt:unstructured"
+                                height="{Long}316">
+                            </linkDialogConfig>
+                        </links>
+                        <paraformat
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
+                            <formats jcr:primaryType="cq:WidgetCollection">
+                                <Title_x0020_Page
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Title Page"
+                                    tag="h1"/>
+                                <Subtitle
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Subtitle"
+                                    tag="h2"/>
+                                <Title_x0020_in_x0020_Paragraphs
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Title in Paragraphs"
+                                    tag="h3"/>
+                                <Content
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Content"
+                                    tag="p"/>
+                                <Group
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Group"
+                                    tag="code"/>
+                            </formats>
+                        </paraformat>
+                        <spellcheck
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <styles
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
+                            <styles jcr:primaryType="cq:WidgetCollection">
+                                <separator
+                                    jcr:primaryType="nt:unstructured"
+                                    cssName="btn"
+                                    text="Button"/>                               
+                            </styles>
+                        </styles>
+                    </rtePlugins>
+                    <uiSettings jcr:primaryType="nt:unstructured">
+                    <cui jcr:primaryType="nt:unstructured">
+                        <inline
+                            jcr:primaryType="nt:unstructured"
+                            toolbar="[links#modifylink,links#unlink,format#bold,format#italic,justify#justifyleft,justify#justifycenter,justify#justifyright,lists#unordered,lists#ordered,lists#outdent,lists#indent,fullscreen#start,control#close,control#save]"/>
+                        <fullscreen
+                            jcr:primaryType="nt:unstructured"
+                            toolbar="[links#modifylink,links#unlink,links#anchor,format#bold,format#italic,format#underline,subsuperscript#subscript,subsuperscript#superscript,edit#cut,edit#copy,edit#paste-plaintext,findreplace#find,findreplace#replace,undo#undo,undo#redo,justify#justifyleft,justify#justifycenter,justify#justifyright,lists#unordered,lists#ordered,lists#outdent,lists#indent,spellcheck#checktext,misctools#specialchars,#styles,#paraformat,fullscreen#start,control#close,control#save]">
+                            <popovers jcr:primaryType="nt:unstructured">
+                                <styles
+                                    jcr:primaryType="nt:unstructured"
+                                    items="styles:getStyles:styles-pulldown"
+                                    ref="styles"/>
+                                <paraformat
+                                    jcr:primaryType="nt:unstructured"
+                                    items="paraformat:getFormats:paraformat-pulldown"
+                                    ref="paraformat"/>
+                            </popovers>
+                        </fullscreen>
+                    </cui>
+                </uiSettings>
+                </text>
+            </items>
+        </tab1>
+    </items>
+</jcr:root>

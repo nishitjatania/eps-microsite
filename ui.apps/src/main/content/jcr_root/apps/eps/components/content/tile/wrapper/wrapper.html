@@ -1,0 +1,20 @@
+<div data-sly-test.author="${!wcmmode.disabled && !wcmInit.isTouchAuthoring && !wcmmode.preview}"
+	data-sly-unwrap>
+	<p style="color:#666;">Please Edit Tile Wrapper Component</p>
+</div>
+<section class="project-tile-wrapper">
+	<div class="row no-margin">
+		<div data-sly-test="${author}" data-sly-unwrap>
+			<div class="col-ms-6">
+				<div data-sly-resource="${'tile1' @resourceType='eps/components/content/tile/content'}"></div>
+			</div>
+			<div class="col-ms-6">
+				<div data-sly-resource="${'tile2' @resourceType='eps/components/content/tile/content'}"></div>
+			</div>
+		</div>
+		<div data-sly-test="${!author}" data-sly-unwrap>
+				<div data-sly-resource="${'tile1' @resourceType='eps/components/content/tile/content'}"></div>
+				<div data-sly-resource="${'tile2' @resourceType='eps/components/content/tile/content'}"></div>
+		</div>
+	</div>
+</section>

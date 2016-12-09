@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Tile Content Config"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <tileheader
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Tile Header"
+					            required="true"
+					            name="./tileheader"
+					            sling:resourceType="granite/ui/components/foundation/form/textfield"/> 
+					        <tilesubtext
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Tile Subtext"
+					            name="./tilesubtext"
+					            sling:resourceType="granite/ui/components/foundation/form/textfield"/> 
+					        <ctalabel
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="CTA Label"
+					            name="./ctalabel"
+					            value="See More"
+					            sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+					        <ctaurl
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="CTA URL"
+					            name="./ctaurl"
+					            rootPath="/content/eps"
+					            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+					        <tiletheme
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Tile Theme"
+					            name="./tiletheme"
+					            sling:resourceType="granite/ui/components/foundation/form/select">
+					               <items jcr:primaryType="nt:unstructured">
+					                   <purple
+					                       jcr:primaryType="nt:unstructured"
+					                       text="Purple"
+					                       value="color-purple"/>
+					                   <blue
+					                       jcr:primaryType="nt:unstructured"
+					                       text="Blue"
+					                       value="color-blue"/>
+					           	</items>
+					        </tiletheme>
+                        </items>
+                    </columns>
+                </items>
+            </tab1>
+        </items>
+    </content>
+</jcr:root>

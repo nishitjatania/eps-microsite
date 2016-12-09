@@ -1,0 +1,15 @@
+<div data-sly-test.author="${!wcmmode.disabled && !wcmInit.isTouchAuthoring && !wcmmode.preview}"
+	data-sly-unwrap>
+	<p style="color:#666;">Please Edit Right Rail Content Component</p>
+</div>
+<sly data-sly-test="${properties.railcontentheader}" data-sly-unwrap>
+<sly data-sly-use.rightrail="${'com.ads.eps.core.use.RightRail'}"
+		data-sly-unwrap> </sly>
+<li>${properties.railcontentheader @ context = 'html'}
+	<ul>
+	<sly data-sly-list.rightrailitem="${rightrail.rightRailList}" data-sly-unwrap>
+		<li>${rightrailitem.detail @ context = 'html'}</li>
+	</sly>
+	</ul>
+</li>
+</sly>

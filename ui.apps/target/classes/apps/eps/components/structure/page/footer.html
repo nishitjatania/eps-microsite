@@ -1,0 +1,45 @@
+<sly data-sly-use.footer="${'com.ads.eps.core.use.Footer'}"
+	data-sly-unwrap> </sly>
+<footer>
+	<div class="container-fluid no-pad">
+		<div class="contact border-red -top">
+			<a href="${inheritedPageProperties.contactusurl}">${inheritedPageProperties.contactustext
+				@ context='html'}</a>
+		</div>
+		<div class="copyright">
+			<div class="row inner-margin">
+				<div class="col-md-6">
+					${inheritedPageProperties.copyrighttext @ context='html'} <a
+						href="${inheritedPageProperties.privacyurl}" target="_blank">${inheritedPageProperties.privacytext
+						@ context='html'}</a>
+				</div>
+				<div class="col-md-6">
+					<ul class="social">
+						<sly data-sly-list.social="${footer.socialFieldsList}" data-sly-unwrap>
+						<li><a href="${social.socialurl}"
+							class="${social.socialicon}"><span class="sr-only">${social.socialtitle}</span></a></li>
+						</sly>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<sly data-sly-test="${inheritedPageProperties.gasiteid}" data-sly-unwrap>
+<script>
+	(function(b, o, i, l, e, r) {
+		b.GoogleAnalyticsObject = l;
+		b[l] || (b[l] = function() {
+			(b[l].q = b[l].q || []).push(arguments)
+		});
+		b[l].l = +new Date;
+		e = o.createElement(i);
+		r = o.getElementsByTagName(i)[0];
+		e.src = 'https://www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e, r)
+	}(window, document, 'script', 'ga'));
+	ga('create', '${inheritedPageProperties.gasiteid}');
+	ga('send', 'pageview');
+</script>
+</sly>
+<sly data-sly-include="footerlibs.html"/>

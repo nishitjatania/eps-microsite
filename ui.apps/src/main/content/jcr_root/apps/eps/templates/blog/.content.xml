@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="This is the template for creating Epsilon Microsite individual blog page"
+    jcr:primaryType="cq:Template"
+    jcr:title="Epsilon Microsite Blog page"    
+    ranking="{Long}8">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="eps/components/structure/blog"/>
+</jcr:root>

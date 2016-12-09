@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Tile Properties"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+    	<tileheader
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Tile Header"
+            allowBlank="false"
+            name="./tileheader"
+            xtype="textfield"/> 
+        <tilesubtext
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Tile Subtext"
+            name="./tilesubtext"
+            xtype="textfield"/> 
+        <ctalabel
+            jcr:primaryType="cq:Widget"
+            fieldLabel="CTA Label"
+            name="./ctalabel"
+            defaultValue="See More"
+            xtype="textfield"/>
+        <ctaurl
+            jcr:primaryType="cq:Widget"
+            fieldLabel="CTA URL"
+            name="./ctaurl"
+            rootPath="/content/eps"
+            xtype="pathfield"/>
+        <tiletheme
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Tile Theme"
+            name="./tiletheme"
+            xtype="selection" 
+            type="select">
+               <options jcr:primaryType="cq:WidgetCollection">
+                   <purple
+                       jcr:primaryType="nt:unstructured"
+                       text="Purple"
+                       value="color-purple"/>
+                   <blue
+                       jcr:primaryType="nt:unstructured"
+                       text="Blue"
+                       value="color-blue"/>
+           	</options>
+        </tiletheme>
+    </items>
+</jcr:root>

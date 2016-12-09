@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Grid Config"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <gridheader
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Grid Header"
+					            required="true"
+					            name="./gridheader"
+					            sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+					        <isgallery
+					            jcr:primaryType="nt:unstructured"
+					            text="Display as Gallery?"
+					            name="./isgallery"
+					            sling:resourceType="granite/ui/components/foundation/form/checkbox"/>         
+					        <griddescription
+					            jcr:primaryType="nt:unstructured"
+					            fieldLabel="Grid Description"
+					            name="./griddescription"
+					            sling:resourceType="cq/gui/components/authoring/dialog/richtext"/>
+					        <images
+							    jcr:primaryType="nt:unstructured"
+							    fieldLabel="Grid Images"
+							    fieldDescription="Click the '+' to add grid images"
+							    sling:resourceType="/apps/eps/components/content/common/multifield">
+				                        <field
+		                                	jcr:primaryType="nt:unstructured"
+		                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+		                                    name="./images">
+		                                	<layout
+		                                    	jcr:primaryType="nt:unstructured"
+		                                    	sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+		                                        method="absolute"/>
+		                                    	<items jcr:primaryType="nt:unstructured">
+		                                        	<column
+		                                              	jcr:primaryType="nt:unstructured"
+		                                                sling:resourceType="granite/ui/components/foundation/container">
+			                                            <items jcr:primaryType="nt:unstructured">
+												            <linkpath
+												                jcr:primaryType="nt:unstructured"
+												                fieldLabel="Grid Image Path"
+												                required="true"
+												                name="./imagepath"
+												                rootPath="/content/dam/eps"
+												                autoWidth="{Boolean}true"
+												                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"/>
+												            <linktitle
+												                jcr:primaryType="nt:unstructured"
+												                fieldLabel="Grid Image Title"
+												                name="./imagetitle"
+												                autoWidth="{Boolean}true"
+												                sling:resourceType="granite/ui/components/foundation/form/textfield"/>		            
+							       					</items>
+		                                    	</column>
+		                                	</items>
+		                            	</field>
+							</images>
+                        </items>
+                    </columns>
+                </items>
+            </tab1>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,79 @@
+<div data-sly-test.author="${!wcmmode.disabled && !wcmInit.isTouchAuthoring && !wcmmode.preview}"
+	data-sly-unwrap>
+	<p style="color:#666;">Please Edit Banner Component</p>
+</div>
+<sly data-sly-use.base="${'com.ads.eps.core.use.BaseComponent' @ link=properties.bannerlogourl}"
+	data-sly-unwrap> </sly>
+<sly data-sly-test="${properties.bannerheader}" data-sly-unwrap>
+<sly data-sly-test="${properties.bannertheme == 'home'}" data-sly-unwrap>
+<banner
+	name="main-header" class="site-header home lazyload"
+	data-bgset="${properties.bannerbgmobileimage || properties.bannerbgxlimage} [(max-width: 480px)] | ${properties.bannerbgtabletimage || properties.bannerbgxlimage} [(max-width: 768px)] | ${properties.bannerbglgimage || properties.bannerbgxlimage} [(max-width: 1200px)] | ${properties.bannerbgxlimage}">
+			<div class="rowinner-margin">
+				<div class="col-md-8 col-sm-12 header-content-wrapper">
+					<sly data-sly-test="${properties.bannerlogo}" data-sly-unwrap> 
+						<a href="${base.validLink}" title="${properties.bannerlogotitle}" class="logo">
+							<img src="${properties.bannerlogo}" alt="" />
+						</a>
+					</sly>
+					<h1>${properties.bannerheader @ context = 'html'}</h1>
+					<sly data-sly-test="${properties.bannerdescription}" data-sly-unwrap>
+						<div data-sly-use.text="/apps/eps/components/content/scripts/text.js" data-sly-unwrap="${text.context == text.CONST.CONTEXT_HTML}" data-emptytext="Text">${properties.bannerdescription @ context=text.context}</div>
+				</sly>
+				</div>
+			</div>
+		</banner>
+	</sly>
+	<sly data-sly-test="${properties.bannertheme == 'connectors'}" data-sly-unwrap>
+		<banner class="site-header no-image-logo-block" name="main-header">
+			<div class="logo-block">
+				<div class="row inner-margin">
+					<div class="col-md-6 col-sm-12">
+						<a href="${base.validLink}" class="logo">
+							<img src="${properties.bannerlogo}" alt="${properties.bannerlogotitle}"/>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row inner-margin">
+				<div class="col-md-8 col-lg-6">
+					<h1>${properties.bannerheader @ context = 'html'}</h1>
+					<sly data-sly-test="${properties.bannerdescription}" data-sly-unwrap>
+						<div data-sly-use.text="/apps/eps/components/content/scripts/text.js" data-sly-unwrap="${text.context == text.CONST.CONTEXT_HTML}" data-emptytext="Text">${properties.bannerdescription @ context=text.context}</div>
+				</sly>
+				</div>
+			</div>
+		</banner>
+	</sly>
+	<sly data-sly-test="${properties.bannertheme == 'project'}" data-sly-unwrap>
+		<banner name="main-header" class="site-header back-page project-list lazyload" data-bgset="${properties.bannerbgmobileimage || properties.bannerbgxlimage} [(max-width: 480px)] | ${properties.bannerbgtabletimage || properties.bannerbgxlimage} [(max-width: 768px)] | ${properties.bannerbglgimage || properties.bannerbgxlimage} [(max-width: 1200px)] | ${properties.bannerbgxlimage}">
+			<div class="row inner-margin">
+				<div class="col-md-8 col-sm-12 header-content-wrapper">
+					<a href="${base.validLink}" title="${properties.bannerlogotitle}" class="logo"><img src="${properties.bannerlogo}" alt=""/></a>
+						<h1>${properties.bannerheader @ context = 'html'}</h1>
+						<sly data-sly-test="${properties.bannerdescription}" data-sly-unwrap>
+						<div data-sly-use.text="/apps/eps/components/content/scripts/text.js" data-sly-unwrap="${text.context == text.CONST.CONTEXT_HTML}" data-emptytext="Text">${properties.bannerdescription @ context=text.context}</div>
+				</sly>
+				</div>
+			</div>
+		</banner>
+	</sly>
+	<sly data-sly-test="${properties.bannertheme == 'individualproject'}" data-sly-unwrap>
+	<banner name="main-header" class="site-header back-page lazyload" data-bgset="${properties.bannerbgmobileimage || properties.bannerbgxlimage} [(max-width: 480px)] | ${properties.bannerbgtabletimage || properties.bannerbgxlimage} [(max-width: 768px)] | ${properties.bannerbglgimage || properties.bannerbgxlimage} [(max-width: 1200px)] | ${properties.bannerbgxlimage}">
+	<div class="row inner-margin">
+		<div class="col-md-8 col-sm-12 header-content-wrapper">
+			<a href="${base.validLink}" title="${properties.bannerlogotitle}" class="logo"><img src="${properties.bannerlogo}" alt=""/></a>
+		</div>		
+		<div class="row no-margin">
+			<div class="project-details col-md-4 col-md-offset-4 text-center">
+				<img data-sly-test="${properties.bannerheaderimage}" src="${properties.bannerheaderimage}" alt="${properties.bannerheaderimagealttext}">
+				<h1>${properties.bannerheader @ context = 'html'}</h1>
+				<sly data-sly-test="${properties.bannerdescription}" data-sly-unwrap>
+						<div data-sly-use.text="/apps/eps/components/content/scripts/text.js" data-sly-unwrap="${text.context == text.CONST.CONTEXT_HTML}" data-emptytext="Text">${properties.bannerdescription @ context=text.context}</div>
+				</sly>
+			</div>
+		</div>
+	</div>
+	</banner>
+</sly>
+</sly>

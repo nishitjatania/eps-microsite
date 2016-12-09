@@ -1,0 +1,24 @@
+<div data-sly-test.author="${!wcmmode.disabled && !wcmInit.isTouchAuthoring && !wcmmode.preview}"
+	data-sly-unwrap>
+	<p style="color:#666;">Please Edit Project Details Component</p>
+</div>
+<sly data-sly-test="${properties.projectname}" data-sly-unwrap>
+<section class="project-details">
+	<div class="row inner-margin">
+	<div class="col-md-7 col-md-offset-1">
+		<h2>${properties.projectname @ context = 'html'}</h2>
+		<h3 data-sly-test="${properties.projectheader}">${properties.projectheader @ context = 'html'}</h3>
+		${properties.projectdescription @ context = 'html'}
+		<h4 data-sly-test="${properties.projectsubheader}">${properties.projectsubheader @ context = 'html'}</h4>
+		<ul>
+		<sly data-sly-use.projectsubheaderdetails="${'com.ads.eps.core.use.RightRail'}"
+		data-sly-unwrap> </sly>
+		<sly data-sly-list.projectsubheaderdetailsitem="${projectsubheaderdetails.rightRailList}">
+			<li>${projectsubheaderdetailsitem.detail @ context = 'html'}</li>
+		</sly>
+		</ul>
+	</div>
+	<div data-sly-resource="${'rightrailwrapper' @resourceType='eps/components/content/rightrail/wrapper'}"></div>
+	</div>
+</section>
+</sly>

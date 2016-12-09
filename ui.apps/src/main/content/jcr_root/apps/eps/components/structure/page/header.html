@@ -1,0 +1,51 @@
+<sly data-sly-use.header="${'com.ads.eps.core.use.Header'}"
+	data-sly-unwrap> </sly>
+<header>
+	<a href="#content" class="skip-main">${properties.skipcontenttext || 'Skip To Main Content'}</a>
+</header>
+<!-- TEMPLATE: SIDE NAVIGATION -->
+<!-- PATH: _templates/_partials/side-navigation.html -->
+<div class="mobile-header navbar navbar-default navbar-fixed-top">
+	<div class="container">
+			<button type="button" class="navbar-toggle" aria-expanded="false" aria-controls="navbar">
+  			<span class="sr-only">${properties.togglenavigationtext || 'Toggle Navigation'}</span>
+  			<span class="icon-bar"></span>
+  			<span class="icon-bar"></span>
+  			<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#content"><img src="${properties.logo || '/content/dam/eps/images/logo-epsilon.png'}" alt=""/></a>
+	</div>
+</div>
+<nav class="sidebar" id="navbar">
+		<ul class="nav navbar-nav">
+		<li role="search"><input type="text" class="search" placeholder="search"/></li>
+		<sly data-sly-list.menu="${header.menuFieldsList}" data-sly-unwrap>
+			<sly data-sly-test="${menu.menuisbutton}" data-sly-unwrap>
+				<li><a href="${menu.menuurl}" role="button" aria-controls="${menu.menuflyoutcontrol}"  aria-expanded="false" class="before-epsilon-${menu.menuicon} flyout-trigger">${menu.menulabel}</a></li>
+			</sly>
+			<sly data-sly-test="${!menu.menuisbutton}" data-sly-unwrap>
+				<li><a href="${menu.menuurl}" class="before-epsilon-${menu.menuicon}">${menu.menulabel}</a></li>
+			</sly>
+		</sly>
+		<sly data-sly-list.additionalMenu="${header.additionalMenuFieldsList}" data-sly-unwrap>
+			<sly data-sly-test="${additionalMenuList.first}" data-sly-unwrap>
+			<li class="external"><a href="${additionalMenu.menuurl}" class="before-epsilon-${additionalMenu.menuicon} icon-grey">${additionalMenu.menulabel}</a></li>			
+			</sly>
+			<sly data-sly-test="${!additionalMenuList.first}" data-sly-unwrap>
+			<li ><a href="${additionalMenu.menuurl}" class="before-epsilon-${additionalMenu.menuicon} icon-grey">${additionalMenu.menulabel}</a></li>			
+			</sly>
+		</sly>
+		</ul>
+</nav>
+<sly data-sly-list.secondarymenu="${header.secondaryMenuFieldsList}" data-sly-unwrap>
+<div class="flyout" id="${secondarymenu.menuflyoutcontrol}" role="navigation" aria-label="mobile-navigation" aria-hidden="true">
+	<div class="flyout-container" id="${secondarymenu.id}">
+		<strong class="before-epsilon-${secondarymenu.menuicon}">${secondarymenu.menuheader}</strong>
+			<ul>
+				<sly data-sly-list.menuitems="${secondarymenu.menuitemslist}" data-sly-unwrap>
+				<li><a href="${menuitems.url}">${menuitems.title}</a></li>
+				</sly>
+			</ul>
+	</div>
+</div>
+</sly>

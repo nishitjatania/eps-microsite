@@ -1,0 +1,18 @@
+<div data-sly-test.author="${!wcmmode.disabled && !wcmInit.isTouchAuthoring && !wcmmode.preview}">
+	<p style="color:#666;">Please Edit Article List Component</p>
+</div>
+<section class="project-list">
+<sly data-sly-use.articlelist="${'com.ads.eps.core.use.ArticleList'}"
+	data-sly-unwrap> </sly>
+<sly data-sly-list.article="${articlelist.articleList}" data-sly-unwrap>
+<article class="project-list-item lazyload" data-bgset="${article.bgmobileimage || article.bgxlimage} [(max-width: 480px)] | ${article.bgtabletimage || article.bgxlimage} [(max-width: 768px)] | ${article.bglgimage || article.bgxlimage} [(max-width: 1200px)] | ${article.bgxlimage}">
+	<div class="row no-margin">
+		<div class="project-list-details col-md-6 col-md-offset-3">
+			<h2>${article.title @ context='html'}</h2>
+			${article.description @ context='html'}
+			<a href="${article.url}" class="btn">${properties.ctalabel @ context='html'}</a>
+		</div>
+	</div>
+</article>
+</sly>
+</section>

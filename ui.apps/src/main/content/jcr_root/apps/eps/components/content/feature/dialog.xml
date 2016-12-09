@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Feature Properties"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+    	<featurebgimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Feature BG Image"
+            name="./featurebgimage"
+            rootPath="/content/dam/eps"
+            allowBlank="false"
+            xtype="pathfield"/>
+        <featurebgmobileimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Feature BG Mobile Device Image"
+            name="./featurebgmobileimage"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/>
+        <featurebgtabletimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Feature BG Tablet Image"
+            name="./featurebgmobileimage"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/>
+        <featurelogo
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Feature Logo"
+            name="./featurelogo"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/>
+        <featureheader
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Feature Header"
+            allowBlank="false"
+            name="./featureheader"
+            xtype="textfield"/>
+        <featuresubheader
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Feature Sub Header"
+            name="./featuresubheader"
+            xtype="textfield"/>
+        <featuredescription
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Feature Description"
+            name="./featuredescription"
+            xtype="richtext">
+            <rtePlugins xtype="cqinclude" jcr:primaryType="nt:unstructured" path="/apps/eps/components/content/config/richtextconfig/dialog/items/tab1/items/text/rtePlugins.infinity.json"/>
+        </featuredescription>
+        <ctalabel
+            jcr:primaryType="cq:Widget"
+            fieldLabel="CTA Label"
+            name="./ctalabel"
+            defaultValue="Learn More"
+            xtype="textfield"/>
+        <ctaurl
+            jcr:primaryType="cq:Widget"
+            fieldLabel="CTA URL"
+            name="./ctaurl"
+            rootPath="/content/eps"
+            xtype="pathfield"/>
+    </items>
+</jcr:root>

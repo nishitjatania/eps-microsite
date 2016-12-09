@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Project Result Properties"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+    	<projectresultheader
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Project Result Header"
+            allowBlank="false"
+            name="./projectresultheader"
+            xtype="textfield"/>       
+        <projectresultdescription
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Project Result Description"
+            name="./projectresultdescription"
+            xtype="richtext">
+            <rtePlugins xtype="cqinclude" jcr:primaryType="nt:unstructured" path="/apps/eps/components/content/config/richtextconfig/dialog/items/tab1/items/text/rtePlugins.infinity.json"/>
+        </projectresultdescription>
+        <projectresultimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Project Result Image"
+            fieldDescription="Select this image only for key result display"
+            allowBlank="false"
+            rootPath="/content/dam/eps"
+            name="./projectresultimage"
+            xtype="pathfield"/>  
+        <iskeyresult
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Display as Key Result?"
+            name="./iskeyresult"
+            xtype="selection"
+            type="checkbox"/>  
+        <projectresultbgxlimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Project Result BG Desktop Image"
+            name="./projectresultbgxlimage"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/> 
+        <projectresultbgmobileimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Project Result BG Mobile Device Image"
+            name="./projectresultbgmobileimage"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/>
+        <projectresultbgtabletimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Project Result BG Tablet Image"
+            name="./projectresultbgtabletimage"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/>
+        <projectresultbglgimage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Project Result BG Large Image"
+            name="./projectresultbglgimage"
+            allowBlank="false"
+            rootPath="/content/dam/eps"
+            xtype="pathfield"/>
+    </items>
+</jcr:root>
