@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-12-06T16:38:50.628-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/eps/templates/project"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="California Lottery"
+        sling:resourceType="eps/components/structure/project"
+        articlebgimage="/content/dam/eps/images/project-list-hero-desktop.jpg"
+        articlebglgimage="/content/dam/eps/images/project-list-hero-desktop.jpg"
+        articlebgmobileimage="/content/dam/eps/images/home-hero-tablet.jpg"
+        articlebgtabletimage="/content/dam/eps/images/home-hero-tablet.jpg"
+        articlebgxlimage="/content/dam/eps/images/project-2-desktop.jpg"
+        articledescription="&lt;p>The Golden State’s lottery wins with a highly scalable website platform.&lt;/p>&#xa;"
+        articletitle="California Lottery">
+        <banner
+            jcr:lastModified="{Date}2016-12-06T14:58:05.355-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="eps/components/content/banner"
+            bannerbgimage="/content/dam/eps/images/pac-union-key-result-lg.jpg"
+            bannerbglgimage="/content/dam/eps/images/home-hero-desktop.jpg"
+            bannerbgmobileimage="/content/dam/eps/images/pac-union-key-result-sm.jpg"
+            bannerbgtabletimage="/content/dam/eps/images/pac-union-med.jpg"
+            bannerbgxlimage="/content/dam/eps/images/project-list-hero-desktop.jpg"
+            bannerdescription="&lt;p>&lt;a href=&quot;#&quot;>&lt;span class=&quot;btn&quot;>View Case Study&lt;/span>&lt;/a>&lt;/p>&#xa;"
+            bannerheader="Scheduling intelligence gives Patagonia a lift in email relevance, clicks and revenue"
+            bannerheaderimage="/content/dam/eps/images/logo-pac-union-large.png"
+            bannerheaderimagealttext="Pacific Union"
+            bannerlogo="/content/dam/eps/images/logo-epsilon.png"
+            bannerlogotitle="Return To Home"
+            bannerlogourl="/content/eps/en/home"
+            bannertheme="individualproject"
+            textIsRich="true"/>
+        <projectdetails
+            jcr:lastModified="{Date}2016-12-05T14:50:53.841-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="eps/components/content/projectdetails"
+            details="[{&quot;detail&quot;:&quot;Lorem ipsum something something&quot;},{&quot;detail&quot;:&quot;Lorem ipsum something something&quot;},{&quot;detail&quot;:&quot;Lorem ipsum something something&quot;},{&quot;detail&quot;:&quot;Lorem ipsum something something&quot;}]"
+            projectdescription="&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>&#xa;"
+            projectheader="Project subheadline"
+            projectname="Project Name"
+            projectsubheader="Subheadline 2">
+            <rightrailwrapper jcr:primaryType="nt:unstructured">
+                <railcontent
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/parsys">
+                    <content
+                        jcr:created="{Date}2016-12-05T14:52:32.139-05:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2016-12-05T14:52:57.484-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="eps/components/content/rightrail/content"
+                        details="\{&quot;detail&quot;:&quot;Responsive website&quot;}"
+                        railcontentheader="Project"/>
+                    <content_1214223245
+                        jcr:created="{Date}2016-12-05T14:53:05.114-05:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2016-12-05T14:53:34.031-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="eps/components/content/rightrail/content"
+                        details="[{&quot;detail&quot;:&quot;User Experience&quot;},{&quot;detail&quot;:&quot;Interface Design&quot;},{&quot;detail&quot;:&quot;Development&quot;}]"
+                        railcontentheader="Offerings"/>
+                    <content_1524506610
+                        jcr:created="{Date}2016-12-05T14:53:09.346-05:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2016-12-05T14:53:55.910-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="eps/components/content/rightrail/content"
+                        details="\{&quot;detail&quot;:&quot;Industry 01&quot;}"
+                        railcontentheader="Industry"/>
+                    <content_1338465801
+                        jcr:created="{Date}2016-12-05T14:54:05.731-05:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2016-12-05T14:54:18.151-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="eps/components/content/rightrail/content"
+                        details="\{&quot;detail&quot;:&quot;Webby&quot;}"
+                        railcontentheader="Awards"/>
+                </railcontent>
+            </rightrailwrapper>
+        </projectdetails>
+        <gallery
+            jcr:lastModified="{Date}2016-12-05T15:00:26.745-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="eps/components/content/grid"
+            gridheader="Solution"
+            images="[{&quot;imagepath&quot;:&quot;/content/dam/eps/images/portfolio-1.jpg&quot;\,&quot;imagetitle&quot;:&quot;&quot;},{&quot;imagepath&quot;:&quot;/content/dam/eps/images/portfolio-1.jpg&quot;\,&quot;imagetitle&quot;:&quot;&quot;},{&quot;imagepath&quot;:&quot;/content/dam/eps/images/portfolio-1.jpg&quot;\,&quot;imagetitle&quot;:&quot;&quot;}]"
+            isgallery="true"/>
+        <projectresult
+            jcr:lastModified="{Date}2016-12-06T16:38:21.375-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="eps/components/content/projectresult"
+            projectresultbgimage="/content/dam/eps/images/project-results-l.jpg"
+            projectresultbglgimage="/content/dam/eps/images/project-results-l.jpg"
+            projectresultbgmobileimage="/content/dam/eps/images/project-results-sm.jpg"
+            projectresultbgtabletimage="/content/dam/eps/images/project-results-med.jpg"
+            projectresultbgxlimage="/content/dam/eps/images/project-results-xl.jpg"
+            projectresultdescription="&lt;p>We built a custom application on a Sitecore platform that allows Pacific Union’s agents to easily and quickly produce beautiful, personalized presentations, while ensuring consistent formatting and branding. Adopted by 95% of the agents in the first year, the application has reduced the time it takes them to produce presentations from 45–60 minutes to 15 minutes or less.&lt;/p>&#xa;&lt;p>Designed and implemented in just three months, the application is integrated with multiple MLS data feeds, and stores all presentation data. Presentations can be shared across multiple media, including desktop web display, iPad, PDF and printouts. The iPad version is designed to function offline as well, so it can be used in any environment. Being able to show presentations on iPads has differentiated Pacific Union from competitors, and underscored the brand’s reputation for being modern and innovative.&lt;/p>&#xa;"
+            projectresultheader="The results"
+            projectresultimage="The results"/>
+        <dropquote
+            jcr:lastModified="{Date}2016-12-05T15:04:39.326-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="eps/components/content/text"
+            text="&lt;p>Designed and implemented in just three months, the application is integrated with multiple MLS.&lt;/p>&#xa;"
+            textIsRich="true"/>
+        <grid
+            jcr:lastModified="{Date}2016-12-05T15:05:42.824-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="eps/components/content/grid"
+            griddescription="&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.&lt;/p>&#xa;"
+            gridheader="Other Project Headlines"
+            images="[{&quot;imagepath&quot;:&quot;/content/dam/eps/images/additional-project-tile-1.jpg&quot;\,&quot;imagetitle&quot;:&quot;&quot;},{&quot;imagepath&quot;:&quot;/content/dam/eps/images/additional-project-tile-2.jpg&quot;\,&quot;imagetitle&quot;:&quot;&quot;},{&quot;imagepath&quot;:&quot;/content/dam/eps/images/additional-project-tile-3.jpg&quot;\,&quot;imagetitle&quot;:&quot;&quot;},{&quot;imagepath&quot;:&quot;/content/dam/eps/images/additional-project-tile-4.jpg&quot;\,&quot;imagetitle&quot;:&quot;&quot;}]"/>
+        <keyresult
+            jcr:lastModified="{Date}2016-12-06T16:38:50.624-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="eps/components/content/projectresult"
+            iskeyresult="true"
+            projectresultbgimage="/content/dam/eps/images/pac-union-key-result-lg.jpg"
+            projectresultbglgimage="/content/dam/eps/images/pac-union-key-result-lg.jpg"
+            projectresultbgmobileimage="/content/dam/eps/images/pac-union-key-result-sm.jpg"
+            projectresultbgtabletimage="/content/dam/eps/images/pac-union-key-result-md.jpg"
+            projectresultbgxlimage="/content/dam/eps/images/pac-union-key-result-xl.jpg"
+            projectresultdescription="&lt;p>Agents using the app are able to produce presentations 3 to 4 times faster.&lt;/p>&#xa;"
+            projectresultheader="&lt;span class=&quot;lg&quot;>3-4x&lt;/span>faster production time"
+            projectresultimage="/content/dam/eps/images/pac-union.svg"/>
+        <image
+            jcr:lastModified="{Date}2016-12-06T10:59:39.354-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-12-02T20:57:12.392-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/eps/templates/contentpage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Connector Modules"
+        sling:resourceType="eps/components/structure/contentpage">
+        <mainpar
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <banner
+                jcr:created="{Date}2016-12-02T16:54:07.675-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-12-02T20:57:12.387-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="eps/components/content/banner"
+                bannerdescription="&lt;p>Get the greatest possible value from your CMS investment, your content and your marketing budget. Bring Sitecore and Epsilon marketing tools together with the Harmony Connector, TotalSource Plus® Connector and PxM Digital Printshop Connector.&lt;/p>&#xa;"
+                bannerheader="Make the connection"
+                bannerlogo="/content/dam/eps/images/logo-epsilon.png"
+                bannerlogotitle="Return To Home"
+                bannerlogourl="/content/eps/en/home"
+                bannertheme="connectors"
+                textIsRich="true"/>
+            <accordion
+                jcr:created="{Date}2016-12-02T17:28:43.736-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-12-02T17:53:45.793-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="eps/components/content/accordion"
+                accordionitems="[{&quot;title&quot;:&quot;Harmony Connector&quot;\,&quot;description&quot;:&quot;&lt;p>Integrate Sitecore and Epsilon’s Agility Harmony email platform with the Harmony Connector and you get unprecedented capacity. Sitecore’s Email Campaign Manager can scale your campaigns to previously unreachable volumes.&lt;/p>\\n&lt;p>Agility Harmony\, built to deliver highly personalized\, omnichannel campaigns\, set the bar for digital messaging platforms and continues to earn the industry’s top marks. By offloading personalization and delivery from Sitecore’s servers and SMTP relay to Harmony servers\, you can increase your email lists to the tens of millions.&lt;/p>\\n&lt;p>Your Sitecore content is synchronized with the Agility Harmony platform. You can edit and manage email content within Sitecore\, and reuse that content in your web marketing (and your print mailings as well\, when you use the PxM Digital Printshop Connector).&lt;/p>\\n&lt;p>You have a system that will allow you to engage individual consumers with offers tailored to win their attention and business — and do it on a massive scale.&lt;/p>\\n&quot;},{&quot;title&quot;:&quot;TotalSource Plus Connector&quot;\,&quot;description&quot;:&quot;&lt;p>Connect Sitecore’s personalization engine to the most comprehensive source of U.S. consumer data to ensure your personalization is accurate\, timely and meaningful. Achieve the one-to-one relevance that customers expect today.&lt;/p>\\n&lt;p>With the TotalSource Plus Connector\, you can seamlessly link Sitecore to the thousands of unique data points spanning demographics\, spend behavior\, lifestyle information and more on every U.S. household in the TotalSource Plus database. In addition\, you can add customized rules to Sitecore’s rules engine to enable data-driven marketing finely tuned to meet to your needs and goals.&lt;/p>\\n&lt;p>Knowing customers on an individual level\, in their present moment and also where they are likely headed\, is central to what we do at Epsilon. Our data makes that possible. With the TotalSource Plus Connector\, you have real-time access to our rich\, deep consumer information. You have the data you need to engage your customers effectively.&lt;/p>\\n&quot;},{&quot;title&quot;:&quot;PxM Digital Printshop Connector&quot;\,&quot;description&quot;:&quot;&lt;p>Lorem ipsum dolor sit amet\, consectetur adipisicing elit\, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident\, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>\\n&quot;}]"
+                hidealltext="Hide All"
+                showalltext="Show All"/>
+        </mainpar>
+    </jcr:content>
+</jcr:root>

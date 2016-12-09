@@ -1,11 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-12-02T09:37:06.801-05:00"
+        cq:lastModified="{Date}2016-12-08T17:42:09.987-05:00"
         cq:lastModifiedBy="admin"
-        cq:template="/apps/eps/templates/contentpage"
+        cq:template="/apps/eps/templates/homepage"
         jcr:primaryType="cq:PageContent"
         jcr:title="Home"
-        sling:resourceType="eps/components/structure/contentpage"/>
+        sling:resourceType="eps/components/structure/contentpage">
+        <mainpar
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <banner
+                jcr:created="{Date}2016-12-02T15:51:48.831-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-12-08T16:55:00.552-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="eps/components/content/banner"
+                bannerbgimage="/content/dam/eps/images/home_hero_large_v2.jpg"
+                bannerbglgimage="/content/dam/eps/images/home_hero_large_v2.jpg"
+                bannerbgmobileimage="[/content/dam/eps/images/home-hero-tablet.jpg]"
+                bannerbgtabletimage="/content/dam/eps/images/home-hero-tablet.jpg"
+                bannerbgxlimage="/content/dam/eps/images/home_hero_v2_xl-1820.jpg"
+                bannerdescription="&lt;p>Lorem Ipsom. Nam fuga. Et ut hilibusam as doluptas estiorempe erut venda velique sedicitium fuga. Nam fuga. Et ut hilibusam as oluptas.&lt;/p>&#xa;"
+                bannerheader="Epsilon + Adobe Experience Manager"
+                bannerlogo="/content/dam/eps/images/logo-epsilon.png"
+                bannerlogotitle="Return To Home"
+                bannerlogourl="/content/eps/en/home"
+                bannertheme="home"
+                textIsRich="true"/>
+            <wrapper
+                jcr:created="{Date}2016-12-02T16:15:26.140-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-12-02T16:15:26.140-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="eps/components/content/tile/wrapper">
+                <tile1
+                    jcr:created="{Date}2016-12-02T16:15:48.377-05:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-12-02T16:24:59.086-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="eps/components/content/tile/content"
+                    ctalabel="See More"
+                    ctaurl="/content/eps/en/connector-modules"
+                    tileheader="Connectors"
+                    tilesubtext="Lorem Ipsom. Nam fuga. Et ut hilibusam as doluptas estiorempe erut venda velique sedicitium fuga. Nam fuga. Et ut hilibusam as oluptas."
+                    tiletheme="color-purple"/>
+                <tile2
+                    jcr:created="{Date}2016-12-02T16:17:36.376-05:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-12-06T14:30:38.938-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="eps/components/content/tile/content"
+                    ctalabel="Learn More"
+                    ctaurl="/content/eps/en/project"
+                    tileheader="Case Studies"
+                    tilesubtext="Lorem Ipsom. Nam fuga. Et ut hilibusam as doluptas estiorempe erut venda velique sedicitium fuga. Nam fuga."
+                    tiletheme="color-blue"/>
+            </wrapper>
+            <feature
+                jcr:created="{Date}2016-12-02T16:01:44.969-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-12-02T16:14:44.221-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="eps/components/content/feature"
+                ctalabel="Learn More"
+                featurebgimage="/content/dam/eps/images/featured-case-study-bg-lg.jpg"
+                featurebgmobileimage="[/content/dam/eps/images/featured-case-study-bg-sm.jpg\,/content/dam/eps/images/featured-case-study-bg-med.jpg,/content/dam/eps/images/featured-case-study-bg-sm.jpg\,/content/dam/eps/images/featured-case-study-bg-med.jpg]"
+                featurebgxlimage="/content/dam/eps/images/featured-case-study-bg-med.jpg"
+                featuredescription="&lt;p>Lorem Ipsom. Nam fuga. Et ut hilibusam as doluptas estiorempe erut venda velique sedicitium fuga.&lt;/p>&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xa;"
+                featureheader="Featured Case Study"
+                featurelogo="/content/dam/eps/images/logo-pac-union.png"
+                featuresubheader="Awesome Website Buily on AEM"/>
+        </mainpar>
+    </jcr:content>
 </jcr:root>

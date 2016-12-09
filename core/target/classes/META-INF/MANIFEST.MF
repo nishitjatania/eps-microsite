@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1481233322712
+Bnd-LastModified: 1481245146058
 Build-Jdk: 1.8.0_101
 Built-By: njatania
 Bundle-Description: Core bundle for Epsilon Microsite
@@ -8,11 +8,11 @@ Bundle-Name: Epsilon Microsite - Core
 Bundle-SymbolicName: com.ads.eps.core
 Bundle-Version: 0.0.1.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
-Export-Package: com.ads.eps.core;version="1.0",com.ads.eps.core.use;uses
- :="javax.annotation,org.apache.sling.api,org.apache.sling.api.resource,
- org.apache.sling.models.annotations";version="0.0.1",com.ads.eps.core.u
- tils;uses:="javax.servlet.http,org.apache.sling.api,org.apache.sling.ap
- i.resource";version="0.0.1"
+Export-Package: com.ads.eps.core;version="1.0",com.ads.eps.core.use;vers
+ ion="0.0.1";uses:="javax.annotation,org.apache.sling.api,org.apache.sli
+ ng.api.resource,org.apache.sling.models.annotations",com.ads.eps.core.u
+ tils;version="0.0.1";uses:="javax.servlet.http,org.apache.sling.api,org
+ .apache.sling.api.resource"
 Import-Package: javax.inject;version="0.0.0",com.day.cq.commons.inherit;
  version="[5.7,6)",com.day.cq.wcm.api;version="[1.17,2)",javax.annotatio
  n,javax.servlet.http,org.apache.commons.lang;version="[2.5,3)",org.apac

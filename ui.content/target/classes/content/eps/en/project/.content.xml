@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-12-06T10:50:54.106-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/eps/templates/contentpage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Project"
+        sling:resourceType="eps/components/structure/contentpage">
+        <mainpar
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <banner
+                jcr:created="{Date}2016-12-04T07:58:14.602-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-12-06T10:50:54.102-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="eps/components/content/banner"
+                bannerbgimage="/content/dam/eps/images/project-list-hero-desktop.jpg"
+                bannerbglgimage="/content/dam/eps/images/project-list-hero-desktop.jpg"
+                bannerbgmobileimage="/content/dam/eps/images/project-list-hero-sm.jpg"
+                bannerbgtabletimage="/content/dam/eps/images/project-list-hero-md.jpg"
+                bannerbgxlimage="/content/dam/eps/images/project-list-hero-desktop.jpg"
+                bannerdescription="&lt;p>Again and again, we deliver comprehensive solutions tailored to meet our clients unique needs. We bring the advantages of Epsilon’s unrivaled data and analytics, data-driven insights, strategic and engineering expertise and creativity to each project.&lt;/p>&#xa;"
+                bannerheader="Six Sitecore successes"
+                bannerlogo="/content/dam/eps/images/logo-epsilon.png"
+                bannerlogotitle="Return To Home"
+                bannerlogourl="/content/eps/en/home"
+                bannertheme="project"
+                textIsRich="true"/>
+            <articlelist
+                jcr:created="{Date}2016-12-04T08:10:46.500-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-12-05T15:32:40.634-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="eps/components/content/articlelist"
+                ctalabel="See Case Study"
+                rootpath="/content/eps/en/project"/>
+        </mainpar>
+    </jcr:content>
+    <california-lottery/>
+</jcr:root>
